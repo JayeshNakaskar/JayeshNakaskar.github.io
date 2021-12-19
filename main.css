@@ -11,7 +11,7 @@
     border: 0;
     outline: 0;
     font-size: 100%;
-    vertical-align: baseline;
+    vertical-align:middle;
 }
 
 /*FONT*/
@@ -22,10 +22,11 @@ html{
 /*BACKGROUND*/
 body{
     width: 100%;
-    background-image: url(images/BG_01.png);
+    background-image: url(images/BG_03.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 /*MARGIS*/
@@ -131,6 +132,12 @@ header a{
     text-decoration-line: underline;
 }
 
+.whatIDo h3 {
+    color: #13A3FD;
+    font-size: 100px;
+    text-decoration-line: underline;
+}
+
 .iAm {
     color: #25272c;
     font-size: 150px;
@@ -142,16 +149,7 @@ header a{
     z-index: -1;
 }
 
-.PROGRAMMING {
-    color: #25272c;
-    font-size: 150px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    top: -200px;
-    z-index: -1;
-}
+/*-----whatIDO-----*/
 
 
 
@@ -185,12 +183,12 @@ footer p {
         width: 100%;
     }
     .work a img {
-        margin: 2%;
+        margin: 4%;
         width: 96%;
     }
 
     .work2 a img {
-        margin: 2%;
+        margin: 4%;
         width: 96%;
     }
 
@@ -199,13 +197,31 @@ footer p {
         text-decoration: none;
         font-size: 20px;
     }
+
+    body{
+        width: 90%;
+        background-image: url(images/BG_02.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
     header {
         width: 96%;
-        margin: 30px auto 100px auto;
+        margin: 10px auto 50px auto;
         text-align: center;
+    }
+
+    .work a img {
+        margin: 0%;
+        width: 110%;
+    }
+
+    .work2 a img {
+        margin: 4%;
+        width: 110%;
     }
 
     nav a {
@@ -226,18 +242,29 @@ footer p {
         text-decoration-line: underline;
     }
 
+    .whatIDo h3 {
+        color: #13A3FD;
+        font-size: 50px;
+        text-decoration-line: underline;
+    }
+
     .iAm{
         visibility: hidden;
     }
 
-    .PROGRAMMING {
-        visibility: hidden;
-    }
 
     footer {
         text-align: left;
         width: 90%;
         margin: 60px auto;
+    }
+
+    body{
+        width: 100%;
+        background-image: url(images/BG_01.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 
