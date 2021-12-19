@@ -64,6 +64,7 @@ li{
      color: white;
      font-size: 30px;
      margin-bottom: 20px;
+     text-align: center;
      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -131,15 +132,9 @@ header a{
     text-decoration-line: underline;
 }
 
-.whatIDo h3 {
-    color: #13A3FD;
-    font-size: 100px;
-    text-decoration-line: underline;
-}
-
 .iAm {
     color: #25272c;
-    font-size: 150px;
+    font-size: 100px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -217,38 +212,24 @@ footer p {
         font-size: medium;
     }
 
+    .iAm{
+        visibility: hidden;
+    }
+
     .work a img {
-        margin: 0%;
-        width: 110%;
+        margin: 2%;
+        width: 120%;
     }
 
     .work2 a img {
-        margin: 4%;
-        width: 110%;
+        margin: 2%;
+        width: 120%;
     }
 
     nav a {
         color: white;
         text-decoration: none;
         font-size: 15px;
-    }
-
-    .whatIDo {
-        text-align: center;
-        width:  96%;
-        margin: 70px auto 100px auto;
-    }
-
-    .whatIDo h1 {
-        color: #13A3FD;
-        font-size: 50px;
-        text-decoration-line: underline;
-    }
-
-    .whatIDo h3 {
-        color: #13A3FD;
-        font-size: 50px;
-        text-decoration-line: underline;
     }
 
     .iAm{
@@ -261,13 +242,4 @@ footer p {
         width: 90%;
         margin: 60px auto;
     }
-
-    body{
-        width: 110%;
-        background-image: url(images/BG_01.png);
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
-
-
 }
