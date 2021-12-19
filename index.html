@@ -1,179 +1,58 @@
-
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--CSS Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/icons/favicon-32x32.png"
-    />
-
-    <!-- Animate CSS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <title>JAYESH . G . NAKASKAR | GAME PROGRAMMER</title>
-  </head>
-
-  <body>
-      
-       <!-- STYLE.css -->
-
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-
-/* Variables */
-:root {
-  --font-family: "Roboto", sans-serf;
-  --normal-font: 1400;
-  --bold-font: 500;
-  --bolder-font: 900;
-  --bg-color: #000000;
-  --primary-color: #ffffff;
-  --secondary-color: #00aeff;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #a17a69;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
-  --transition: 0.3s;
-}
-/* Variables end */
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* CSS Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-a:hover {
-  color: var(--secondary-color);
-}
-
-body {
-  font-family: var(--font-family);
-}
-
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav h1 {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-}
-
-nav a {
-  color: var(--primary-color);
-  transition: var(--transition);
-}
-nav a:hover {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-nav ul {
-  display: flex;
-  gap: 1.9rem;
-}
-
-nav ul li {
-  font-weight: var(--bold-font);
-}
-
-.burger-menu {
-  color: var(--primary-color);
-  font-size: 2rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  display: none;
-}
+<!DOCTYPE html>
+<html>
 
 
-</style>
+<head>
+  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesjeet" type="text/css" href="main.css">
+</head>
 
 
- <!-- Navbar -->
-    <nav>
-        <h1>JAYESH.G.NAKASKAR</h1>
-        <ul class="navigation">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="burger-menu" id="burger-menu">
-          <ion-icon class="bars" name="menu-outline"></ion-icon>
-        </button>
-  </nav>
-  
+<body>
+  <div class="wrapper">
 
-    <!-- Hero Section -->
+    <nav class="clearfix">
+      <a href="#"><img src="images/Logo.png" alt="dribbble icon"></a>
+    </nav>
 
-    <!-- More about -->
+    <header>
+      <h1>GAME DEVELOPEMENT AND PROGRAMMING</h1>
+      <p>HELLO WORLD ! I am a born programmer.
+        <a href="jnakaskar.jn@gmail.com">Email</a>
+      </p>
+    </header>
 
-    <!-- Skills section -->
+    <div class="work">
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+    </div>
 
-    <!-- Projects section -->
+    <div class="whatIDo">
+      <h1>Everything<br>You Need</h1>
+      <h2 class="iAm"> I AM</h2>
+      <ul>
+        <li>XYZ</li>
+        <li>XYZ</li>
+        <li>XYZ</li>
+        <li>XYZ</li>
+        <li>XYZ</li>
+        <li>XYZ</li>
+        <li>XYZ</li>
+      </ul>
+    </div>
 
-    <!-- Contact section -->
+    <dev class="work2">
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+      <a href="#"><img src="images/Logo.png" alt="project image"></a>
+    </dev>
 
-    <!-- Social accounts - Fixed to the right -->
+  </div>
+</body>
 
-    <!-- Scroll to top -->
-
-    <!-- Footer section -->
-
-    <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Ion icons scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
 </html>
-
