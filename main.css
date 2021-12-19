@@ -181,6 +181,12 @@ footer p {
         margin: 2%;
         width: 96%;
     }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -189,10 +195,23 @@ footer p {
         margin: 30px auto 100px auto;
         text-align: center;
     }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
     .whatIDo {
         text-align: center;
         width:  96%;
         margin: 70px auto 100px auto;
+    }
+
+    .whatIDo h1 {
+        color: #13A3FD;
+        font-size: 50px;
+        text-decoration-line: underline;
     }
 
     .iAm{
