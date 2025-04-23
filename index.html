@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <!-- Link to Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <style>
   /* Set the font family for the body and headings */
   body,
@@ -45,11 +44,42 @@
     }
   }
 </style>
+<!-- Include jQuery for smooth scrolling -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  // Smooth scrolling for anchor links
+  $(document).ready(function () {
+    $("a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+</script>
+
+<!-- Include AOS (Animate On Scroll) library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Initialize AOS after the DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: false // Whether animation should happen only once
+    });
+  });
+</script>
+
 
 <!-- HTML5 Main Code declaration -->
 <!-- Set the background color of the body to black -->
 <body class="w3-black">
-
 <!-- Sidebar Navigation (Hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Logo or Avatar image at the top of the sidebar -->
@@ -58,26 +88,25 @@
   <!-- Navigation links -->
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <!-- Home icon and label -->
-    <i class="fa fa-home w3-xxlarge"></i>
+    <i data-aos="fade-up" class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
   <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <!-- About icon and label -->
-    <i class="fa fa-user w3-xxlarge"></i>
+    <i data-aos="fade-up" class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <!-- Work/Portfolio icon and label -->
-    <i class="fa fa-eye w3-xxlarge"></i>
+    <i data-aos="fade-up" class="fa fa-eye w3-xxlarge"></i>
     <p>WORK</p>
   </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <!-- Contact icon and label -->
-    <i class="fa fa-envelope w3-xxlarge"></i>
+    <i data-aos="fade-up" class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
 </nav>
-
 <!-- Navbar for small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <!-- Navbar container with black background and hover effect -->
@@ -89,17 +118,16 @@
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
-
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
+  <div class="w3-padding-64"></div>
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header  data-aos="fade-up" class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Jayesh </h1>
     <h1 class="w3-jumbo">Nakaskar </h1>
     <p>Programmer and Game Developer.</p>
-    <img src="images/LOGO_BACKGROUND.png" alt="boy" class="w3-image" width="992" height="1108">
+    <img src="images/LOGO_BACKGROUND.png" alt="boy" class="w3-image" width="600" height="600" style="border-radius: 10%;">
   </header>
-
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-white w3-padding-64 w3-center" id="about">
     <h2 class="w3-white"><b>SUMMERY</b></h2>
@@ -411,7 +439,6 @@
       </div>
     </div>
   </div>
-
   <!-- Knowledge Section -->
   <div class="w3-padding-64 w3-content w3-center" id="knowledge">
     <h2 class="w3-text-light-grey">WHAT I KNOW</h2>
@@ -441,7 +468,6 @@
     </div>
     <!-- End Grid for knowledge tables -->
   </div>
-
   <!-- Portfolio Section -->
   <div class="w3-padding-64 w3-content w3-center" id="photos">
     <h2 class="w3-text-</div>light-grey">MY WORKS</h2>
@@ -623,33 +649,33 @@
       </div>
       <!-- End Portfolio Section -->
     </div>
-
-      <!-- Contact Section -->
-      <div class="w3-padding-64 w3-content w3-text-grey w3-center" id="contact">
-        <h2 class="w3-text-light-grey">Contact Me</h2>
-        <hr class="w3-opacity">
-      
-        <div class="w3-section">
-          <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: jnakaskar.jn@gmail.com</p>
-        </div><br>
-        <p>Let's get in touch. Send me a message:</p>
-      
-        <form action="mailto:jnakaskar.jn@gmail.com" method="post" enctype="text/plain">
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
-          </p>
-        </form>
-        <!-- End Contact Section -->
-      </div>
-    <!-- END PAGE CONTENT -->
+    
+    </div>
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey w3-center" id="contact">
+      <h2 class="w3-text-light-grey">Contact Me</h2>
+      <hr class="w3-opacity">
+    
+      <div class="w3-section">
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: jnakaskar.jn@gmail.com</p>
+      </div><br>
+      <p>Let's get in touch. Send me a message:</p>
+    
+      <form action="mailto:jnakaskar.jn@gmail.com" method="post" enctype="text/plain">
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      <!-- End Contact Section -->
   </div>
-
+  <!-- END PAGE CONTENT -->
 </div>
 </body>
+
 </html>
