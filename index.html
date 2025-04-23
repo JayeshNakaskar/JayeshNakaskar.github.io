@@ -3,49 +3,89 @@
 <title>JAYESH_PORTFOLIO</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Link to W3.CSS stylesheet for styling -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Link to Google Fonts for Montserrat font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<!-- Link to Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  /* Set the font family for the body and headings */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif
+  }
+
+  /* Add margin to images in w3-row-padding class */
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
+
+  /* Set the width of the sidebar */
+  .w3-sidebar {
+    width: 120px;
+    background: #222;
+  }
+
+  /* Add a left margin to the main content to match the sidebar width */
+  #main {
+    margin-left: 120px
+  }
+
+  /* Remove the left margin for main content on small screens */
+  @media only screen and (max-width: 600px) {
+    #main {
+      margin-left: 0
+    }
+  }
 </style>
+
+<!-- HTML5 Main Code declaration -->
+<!-- Set the background color of the body to black -->
 <body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<!-- Sidebar Navigation (Hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="images/LOGO.png" style="width:100%">
+  <!-- Logo or Avatar image at the top of the sidebar -->
+  <img src="images/LOGO.png" alt="Logo" style="width:100%">
+
+  <!-- Navigation links -->
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <!-- Home icon and label -->
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
   <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <!-- About icon and label -->
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <!-- Work/Portfolio icon and label -->
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>WORK</p>
   </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <!-- Contact icon and label -->
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
 </nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<!-- Navbar for small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <!-- Navbar container with black background and hover effect -->
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <!-- Navigation links with equal width -->
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">WORK</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
@@ -66,15 +106,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr class="w3-opacity ">
     <p> <b>HELLO !</b></p>
 
-    <p>   I'm Jayesh Nakaskar a born programmer and software engineer working with it throughout recent years. I have self-picked up programming dialects like C, C++, C#, JAVA, PYTHON, and that's just the beginning. </p>
-        
-    <p>   I explicitly like playing with logic (i.e Programming). I am even capable in numerous different fields of tech like android development, blockchain development, Linux Expert, and so on. </p>
-        
-    <p>   I'm fluent in Unity and have been working with it for around 2+ years now. On my journey until now, I have figured out how to make attractive games along with making around a dozen games yet. I can even utilize Unreal Engine modestly alongside having ample experience in it as well. </p>
-        
-    <p>   On a side note, I have had a vision of incorporating Crypto and Gaming from past years although I am diving into it for quite a while already</p>
+    <p> I'm Jayesh Nakaskar a born programmer and software engineer working with it throughout recent years. I have
+      self-picked up programming dialects like C, C++, C#, JAVA, PYTHON, and that's just the beginning. </p>
 
-    <h2 class="w3-white" ><b>SKILLS</b></h2>
+    <p> I explicitly like playing with logic (i.e Programming). I am even capable in numerous different fields of tech
+      like android development, blockchain development, Linux Expert, and so on. </p>
+
+    <p> I'm fluent in Unity and have been working with it for around 2+ years now. On my journey until now, I have
+      figured
+      out how to make attractive games along with making around a dozen games yet. I can even utilize Unreal Engine
+      modestly alongside having ample experience in it as well. </p>
+
+    <p> On a side note, I have had a vision of incorporating Crypto and Gaming from past years although I am diving into
+      it for quite a while already</p>
+
+    <h2 class="w3-white"><b>SKILLS</b></h2>
     <hr class="w3-opacity ">
     <p class="w3-wide">UNITY ENGINE</p>
     <div class="w3-dark-grey">
@@ -82,7 +128,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <p style="background-color: rgb(0, 0, 0); color: white;">EXPEERT</p>
-    <hr class="w3-opacity" style="width:200px;color: white; " >
+    <hr class="w3-opacity" style="width:200px;color: white; ">
 
     <p class="w3-wide">UNREAL ENGINE</p>
     <div class="w3-dark-grey">
@@ -90,7 +136,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <p style="background-color: rgb(0, 0, 0); color: white;">ADVANCED</p>
-    <hr class="w3-opacity" style="width:200px;color: white; " >
+    <hr class="w3-opacity" style="width:200px;color: white; ">
 
     <p class="w3-wide">ANDROID STUDIO</p>
     <div class="w3-dark-grey">
@@ -98,7 +144,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <p style="background-color: rgb(0, 0, 0); color: white;">ADVANCED</p>
-    <hr  class="w3-black" style="width:200px; color: black;" >
+    <hr class="w3-black" style="width:200px; color: black;">
 
     <p class="w3-wide">LINUX EXPERT</p>
     <div class="w3-dark-grey">
@@ -106,12 +152,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <p style="background-color: rgb(0, 0, 0); color: white;">ADVANCED</p>
-    <hr  class="w3-black" style="width:200px; color: black;" >
+    <hr class="w3-black" style="width:200px; color: black;">
 
     <br>
     <div class="w3-row w3-center w3-section w3-light-grey">
-      <div class=" w3-section" style= "background-color: black">
-        <span class="w3-xxlarge w3-text-white" >EDUCATION</span><br></hr>
+      <div class=" w3-section" style="background-color: black">
+        <span class="w3-xxlarge w3-text-white">EDUCATION</span><br></hr>
       </div>
       <div class=" w3-section w3-container">
         <span class="w3-xlarge">2022 - BCA(GMD)</span><br>
@@ -129,456 +175,457 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
 
 
-        <div class="w3-row w3-center w3-section w3-light-grey">
-          <div class=" w3-section" style= "background-color: black">
-            <span class="w3-xxlarge w3-text-white" >WORK EXPERIENCE</span><br></hr>
-          </div>
-          <hr>
-          <div class=" w3-section w3-container">
-            <span class="w3-xlarge"><b>RELIANCE GAMES</b></span><br>
-            <span class="w3-xlarge">(From June 2022 - Currently Working)</span><br>
-          </div>
-          <hr>
-          <div class=" w3-section w3-container">
-            <div class="w3-container w3-border w3-padding">
+      <div class="w3-row w3-center w3-section w3-light-grey">
+        <div class=" w3-section" style="background-color: black">
+          <span class="w3-xxlarge w3-text-white">WORK EXPERIENCE</span><br></hr>
+        </div>
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge"><b>RELIANCE GAMES</b></span><br>
+          <span class="w3-xlarge">(From June 2022 - Currently Working)</span><br>
+        </div>
+        <hr>
+        <div class=" w3-section w3-container">
+          <div class="w3-container w3-border w3-padding">
             <span class="w3-xlarge"><b>GAMES WORKED ON</b></span><br>
-            </div>
-          </div>
-
-          <hr>
-          <div class=" w3-section w3-container">
-            <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>RAPALA</b></span><br>
-            <hr>
-            <div class="w3-section w3-container">
-              <span class="w3-xlarge"> Worked with : </span><br>
-              <hr>
-              <ul class="w3-ul w3-hover-black w3-white w3-center">
-                <li class="w3-padding-16">BEAMABLE</li>
-                <li class="w3-padding-16">AWS</li>
-                <li class="w3-padding-16">MEMORY PROFILING</li>
-                <li class="w3-padding-16">ANIMATION TIMELINE</li>
-                <li class="w3-padding-16">UNITY UI</li>
-              </ul>
-            </div>
-            
-            <hr>
-            <a href="https://play.google.com/store/apps/details?id=com.Rapala.fly.fishing.spear" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-            <span style="margin: 0 10px;">|</span>
-            <a href="https://apps.apple.com/fi/app/rapala-fishing-simulator/id1630806182" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;">
-            </a>
-            </div>
-
-            <hr style="border-color: black;">
-
-            <hr>
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>CITYTOPIA</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">PLAYFAB</li>
-                  <li class="w3-padding-16">DELTA DNA</li>
-                  <li class="w3-padding-16">FIREBASE</li>
-                  <li class="w3-padding-16">GAME DATA ENCRYPTION</li>
-                  <li class="w3-padding-16">JAVA SCRIPT (BACKEND)</li>
-                </ul>
-              </div>
-
-            <a href="https://play.google.com/store/apps/details?id=com.atari.mobile.citytopia" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-            <span style="margin: 0 10px;">|</span>
-            <a href="https://apps.apple.com/us/app/citytopia-build-your-own-city/id1460807595" target="_blank">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;"></a>
-            </div>
-
-            <hr style="border-color: black;">
-
-            <hr>
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>DRONES 3</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">TK-2D</li>
-                  <li class="w3-padding-16">DO Tween</li>
-                  <li class="w3-padding-16">Photon</li>
-                  <li class="w3-padding-16">PLAY BLAZER</li>
-                  <li class="w3-padding-16">IRON SOURCE</li>
-                </ul>
-              </div>
-
-            <a href="https://play.google.com/store/apps/details?id=com.reliancegames.drones3" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-              <span style="margin: 0 10px;">|</span>
-              <a href="https://apps.apple.com/us/app/drone-shadow-strike-3/id1445399402" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;"></a>
-            </div>
-
-            <hr style="border-color: black;">
-
-            <hr>
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>RS Boxing Champions</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">EZ-GUI</li>
-                  <li class="w3-padding-16">SVN</li>
-                  <li class="w3-padding-16">3D AMIMATION (Code Handling)</li>
-                  <li class="w3-padding-16">INTRNAL PM TOOLS</li>
-                </ul>
-              </div>
-
-            <a href="https://play.google.com/store/apps/details?id=com.reliancegames.rschampions" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-              <span style="margin: 0 10px;">|</span>
-              <a href="https://apps.apple.com/us/app/rs-boxing-champions/id944877545" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;"></a>
-            </div>
-
-            <hr style="border-color: black;">
-
-            <hr>
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>World Robot Boxing</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">EZ-GUI</li>
-                  <li class="w3-padding-16">ADDRESSABLE ASSETS</li>
-                  <li class="w3-padding-16">UFE</li>
-                  <li class="w3-padding-16">COHORTING</li>
-                  <li class="w3-padding-16">SHADERS</li>
-                  
-                </ul>
-              </div>
-
-              <a href="https://play.google.com/store/apps/details?id=com.jumpgames.rswrb" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-              <span style="margin: 0 10px;">|</span>
-              <a href="https://apps.apple.com/in/app/world-robot-boxing/id659425518" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;"></a>
-            </div>
-
-            <hr style="border-color: black;">
-
-            <hr>
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>Super Pixel Heroes</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">AI-ML</li>
-                  <li class="w3-padding-16">CONSOLE</li>
-                  <li class="w3-padding-16">GAME BALANCING</li>
-                  
-                </ul>
-              </div>
-
-              <a href="https://play.google.com/store/apps/details?id=com.reliancegames.superpixelheroes" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-              <span style="margin: 0 10px;">|</span>
-              <a href="https://apps.apple.com/us/app/super-pixel-heroes/id1149840530" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;"></a>
-            </div>
-            <hr>
-
-            <hr style="border-color: black;">
-
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge"></span><br>
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>CID Heroes - Super Agent Run</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">IOS GAME PORTING</li>
-                  <li class="w3-padding-16">APP STORE INTEGRATION</li>
-                  <li class="w3-padding-16">3D AMIMATION (Code Handling)</li>
-                </ul>
-              </div>
-
-              <a href="https://play.google.com/store/apps/details?id=com.zapak.sony.cid.runner.daya.abhijeet.run" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-              <span style="margin: 0 10px;">|</span>
-              <a href="https://apps.apple.com/us/app/cid-heroes-super-agent-run/id6739036607" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" style="width:50px; vertical-align:middle;"></a>
-            </div>
-
-            <hr style="border-color: black;">
-
-            <hr>
-            <div class=" w3-section w3-container">
-              <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>Garbage Pail Kids : The Game</b></span><br>
-              <hr>
-              <div class="w3-section w3-container">
-                <span class="w3-xlarge"> Worked with : </span><br>
-                <hr>
-                <ul class="w3-ul w3-hover-black w3-white w3-center">
-                  <li class="w3-padding-16">BEAMABLE</li>
-                  <li class="w3-padding-16">AWS</li>
-                  <li class="w3-padding-16">SPINE</li>
-                </ul>
-              </div>
-
-              <a href="https://play.google.com/store/apps/details?id=com.reliancegames.garbage.pail.heroes.kids.card.pvp.rpg" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" style="width:100px; vertical-align:middle;"></a>
-            </div>
           </div>
         </div>
-    </div>
-    
-    <!-- Grid for pricing tables -->
-    <h2 class="w3-white" ><b>WHAT I KNOW</b></h2>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-hover-white w3-black w3-center">
-          <li class="w3-hover-black w3-hover-text-green w3-xlarge w3-padding-32">PROGRAMMING SKILLS</li>
-          <li class="w3-padding-16">C#</li>
-          <li class="w3-padding-16">C++</li>
-          <li class="w3-padding-16">C</li>
-          <li class="w3-padding-16">JAVA</li>
-          <li class="w3-padding-16">PYTHON</li>
-        </ul>
-      </div>
 
-      <div class="w3-half">
-        <ul class="w3-ul w3-hover-white w3-black w3-center">
-          <li class="w3-hover-black w3-hover-text-green w3-xlarge w3-padding-32">HOBBYIST SKILLS</li>
-          <li class="w3-padding-16">BLOCKCHAIN</li>
-          <li class="w3-padding-16">MOBILE DEVELOPEMENT</li>
-          <li class="w3-padding-16">INKSCAPE</li>
-          <li class="w3-padding-16">AND MUCH MORE.</li>
-        </ul>
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge"
+            style="text-decoration: underline; text-underline-offset: 4px;"><b>RAPALA</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">BEAMABLE</li>
+              <li class="w3-padding-16">AWS</li>
+              <li class="w3-padding-16">MEMORY PROFILING</li>
+              <li class="w3-padding-16">ANIMATION TIMELINE</li>
+              <li class="w3-padding-16">UNITY UI</li>
+            </ul>
+          </div>
+
+          <hr>
+          <a href="https://play.google.com/store/apps/details?id=com.Rapala.fly.fishing.spear" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/fi/app/rapala-fishing-simulator/id1630806182" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;">
+          </a>
+        </div>
+
+        <hr style="border-color: black;">
+
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge"
+            style="text-decoration: underline; text-underline-offset: 4px;"><b>CITYTOPIA</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">PLAYFAB</li>
+              <li class="w3-padding-16">DELTA DNA</li>
+              <li class="w3-padding-16">FIREBASE</li>
+              <li class="w3-padding-16">GAME DATA ENCRYPTION</li>
+              <li class="w3-padding-16">JAVA SCRIPT (BACKEND)</li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.atari.mobile.citytopia" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/us/app/citytopia-build-your-own-city/id1460807595" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;"></a>
+        </div>
+
+        <hr style="border-color: black;">
+
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>DRONES
+              3</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">TK-2D</li>
+              <li class="w3-padding-16">DO Tween</li>
+              <li class="w3-padding-16">Photon</li>
+              <li class="w3-padding-16">PLAY BLAZER</li>
+              <li class="w3-padding-16">IRON SOURCE</li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.reliancegames.drones3" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/us/app/drone-shadow-strike-3/id1445399402" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;"></a>
+        </div>
+
+        <hr style="border-color: black;">
+
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>RS Boxing
+              Champions</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">EZ-GUI</li>
+              <li class="w3-padding-16">SVN</li>
+              <li class="w3-padding-16">3D AMIMATION (Code Handling)</li>
+              <li class="w3-padding-16">INTRNAL PM TOOLS</li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.reliancegames.rschampions" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/us/app/rs-boxing-champions/id944877545" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;"></a>
+        </div>
+
+        <hr style="border-color: black;">
+
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>World Robot
+              Boxing</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">EZ-GUI</li>
+              <li class="w3-padding-16">ADDRESSABLE ASSETS</li>
+              <li class="w3-padding-16">UFE</li>
+              <li class="w3-padding-16">COHORTING</li>
+              <li class="w3-padding-16">SHADERS</li>
+
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.jumpgames.rswrb" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/in/app/world-robot-boxing/id659425518" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;"></a>
+        </div>
+
+        <hr style="border-color: black;">
+
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>Super Pixel
+              Heroes</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">AI-ML</li>
+              <li class="w3-padding-16">CONSOLE</li>
+              <li class="w3-padding-16">GAME BALANCING</li>
+
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.reliancegames.superpixelheroes" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/us/app/super-pixel-heroes/id1149840530" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;"></a>
+        </div>
+        <hr>
+
+        <hr style="border-color: black;">
+
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge"></span><br>
+          <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>CID Heroes - Super
+              Agent Run</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">IOS GAME PORTING</li>
+              <li class="w3-padding-16">APP STORE INTEGRATION</li>
+              <li class="w3-padding-16">3D AMIMATION (Code Handling)</li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.zapak.sony.cid.runner.daya.abhijeet.run"
+            target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+          <span style="margin: 0 10px;">|</span>
+          <a href="https://apps.apple.com/us/app/cid-heroes-super-agent-run/id6739036607" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store"
+              style="width:50px; vertical-align:middle;"></a>
+        </div>
+
+        <hr style="border-color: black;">
+
+        <hr>
+        <div class=" w3-section w3-container">
+          <span class="w3-xlarge" style="text-decoration: underline; text-underline-offset: 4px;"><b>Garbage Pail Kids :
+              The Game</b></span><br>
+          <hr>
+          <div class="w3-section w3-container">
+            <span class="w3-xlarge"> Worked with : </span><br>
+            <hr>
+            <ul class="w3-ul w3-hover-black w3-white w3-center">
+              <li class="w3-padding-16">BEAMABLE</li>
+              <li class="w3-padding-16">AWS</li>
+              <li class="w3-padding-16">SPINE</li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.reliancegames.garbage.pail.heroes.kids.card.pvp.rpg"
+            target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Play Store" style="width:100px; vertical-align:middle;"></a>
+        </div>
       </div>
-    <!-- End Grid/Pricing tables -->
     </div>
-    
-    
   </div>
-  
+
+  <!-- Knowledge Section -->
+  <div class="w3-padding-64 w3-content w3-center" id="knowledge">
+    <h2 class="w3-text-light-grey">WHAT I KNOW</h2>
+    <hr class="w3-opacity">
+
+    <!-- Grid for knowledge tables -->
+    <div class="w3-row-padding w3-center" style="margin:0 auto; max-width: 800px;"></div>
+    <div class="w3-margin-bottom" style="margin-bottom: 16px;">
+      <ul class="w3-ul w3-hover-white w3-black w3-center">
+        <li class="w3-hover-black w3-hover-text-green w3-xlarge w3-padding-32">PROGRAMMING SKILLS</li>
+        <li class="w3-padding-16">C#</li>
+        <li class="w3-padding-16">C++</li>
+        <li class="w3-padding-16">C</li>
+        <li class="w3-padding-16">JAVA</li>
+        <li class="w3-padding-16">PYTHON</li>
+      </ul>
+    </div>
+
+    <div>
+      <ul class="w3-ul w3-hover-white w3-black w3-center">
+        <li class="w3-hover-black w3-hover-text-green w3-xlarge w3-padding-32">HOBBYIST SKILLS</li>
+        <li class="w3-padding-16">BLOCKCHAIN</li>
+        <li class="w3-padding-16">MOBILE DEVELOPMENT</li>
+        <li class="w3-padding-16">INKSCAPE</li>
+        <li class="w3-padding-16">AND MUCH MORE.</li>
+      </ul>
+    </div>
+    <!-- End Grid for knowledge tables -->
+  </div>
+
   <!-- Portfolio Section -->
   <div class="w3-padding-64 w3-content w3-center" id="photos">
-    <h2 class="w3-text-light-grey">MY WORKS</h2>
+    <h2 class="w3-text-</div>light-grey">MY WORKS</h2>
     <hr>
 
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
 
 
-       <!-- GAME SLOT 1-->
+      <!-- GAME SLOT 1-->
       <div class="w3-center">
         <p>KITTS HOG : Nightmare Of Life</p>
         <p>(Made for a Game Jam)</p>
         <button onclick="PLAY1()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE1()" type="button">PAUSE</button> <br>
         <video src="images/file1.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-        var vid1 = document.getElementById("File1"); 
-        function PLAY1() {
+        <script>
+          var vid1 = document.getElementById("File1");
+          function PLAY1() {
             vid1.play();
             vid1.muted = false;
-        }
-        function PAUSE1() { 
-          vid1.pause(); 
-        } 
+          }
+          function PAUSE1() {
+            vid1.pause();
+          } 
         </script>
-     
+
         <p>SAFFRON</p>
         <p>(Made for a Game Jam)</p>
         <button onclick="PLAY2()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE2()" type="button">PAUSE</button>
         <video src="images/file2.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid2 = document.getElementById("File2"); 
-          function PLAY2() { 
-              vid2.play();
-              vid2.muted = false;
+        <script>
+          var vid2 = document.getElementById("File2");
+          function PLAY2() {
+            vid2.play();
+            vid2.muted = false;
           }
-          function PAUSE2() { 
-            vid2.pause(); 
+          function PAUSE2() {
+            vid2.pause();
           } 
-          </script>
-        </div>
+        </script>
+      </div>
 
-        <!-- GAME SLOT 3-->
+      <!-- GAME SLOT 3-->
       <div class="w3-center">
         <p>DATA COMMUNICATION QUIZ GAME</p>
         <p>(Made for a collage DCN Project based on PointLights.)</p>
         <button onclick="PLAY3()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE3()" type="button">PAUSE</button>
         <video src="images/file3.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid3 = document.getElementById("File3"); 
-          function PLAY3() { 
-              vid3.play();
-              vid3.muted = false;
+        <script>
+          var vid3 = document.getElementById("File3");
+          function PLAY3() {
+            vid3.play();
+            vid3.muted = false;
           }
-          function PAUSE3() { 
-            vid3.pause(); 
+          function PAUSE3() {
+            vid3.pause();
           } 
-          </script>
-      
+        </script>
+
         <p>TPS IN UNREAL</p>
         <p>(Collision and Sound Trigger Prototype)</p>
         <button onclick="PLAY4()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE4()" type="button">PAUSE</button>
         <video src="images/file4.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid4 = document.getElementById("File4"); 
-          function PLAY4() { 
-              vid4.play();
-              vid4.muted = false;
+        <script>
+          var vid4 = document.getElementById("File4");
+          function PLAY4() {
+            vid4.play();
+            vid4.muted = false;
           }
-          function PAUSE4() { 
-            vid4.pause(); 
+          function PAUSE4() {
+            vid4.pause();
           } 
-          </script>
-        </div>
+        </script>
+      </div>
 
 
-        <!-- GAME SLOT 5-->
+      <!-- GAME SLOT 5-->
       <div class="w3-center">
         <p>FIND ME</p>
         <p>(Game made within 24 Hours)</p>
         <button onclick="PLAY5()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE5()" type="button">PAUSE</button>
         <video src="images/file5.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid5 = document.getElementById("File5"); 
-          function PLAY5() { 
-              vid5.play();
-              vid5.muted = false;
+        <script>
+          var vid5 = document.getElementById("File5");
+          function PLAY5() {
+            vid5.play();
+            vid5.muted = false;
           }
-          function PAUSE5() { 
-            vid5.pause(); 
+          function PAUSE5() {
+            vid5.pause();
           } 
-          </script>
-      
+        </script>
+
         <p>QUANTUM SPECTRUM</p>
         <p>(Made for a Game Jam)</p>
         <button onclick="PLAY6()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE6()" type="button">PAUSE</button>
         <video src="images/file6.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid6 = document.getElementById("File6"); 
-          function PLAY6() { 
-              vid6.play();
-              vid6.muted = false;
+        <script>
+          var vid6 = document.getElementById("File6");
+          function PLAY6() {
+            vid6.play();
+            vid6.muted = false;
           }
-          function PAUSE6() { 
-            vid6.pause(); 
+          function PAUSE6() {
+            vid6.pause();
           } 
-          </script>
-        </div>
+        </script>
+      </div>
 
-        <!-- GAME SLOT 7-->
+      <!-- GAME SLOT 7-->
       <div class="w3-center">
         <p>AI IN UNREAL ENGINE</p>
         <p>(AI Prototype in UnrealEngine for collage project)</p>
         <button onclick="PLAY7()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE7()" type="button">PAUSE</button>
         <video src="images/file7.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid7 = document.getElementById("File7"); 
-          function PLAY7() { 
-              vid7.play();
-              vid7.muted = false;
+        <script>
+          var vid7 = document.getElementById("File7");
+          function PLAY7() {
+            vid7.play();
+            vid7.muted = false;
           }
-          function PAUSE7() { 
-            vid7.pause(); 
+          function PAUSE7() {
+            vid7.pause();
           } 
-          </script>
-        
+        </script>
+
         <p>AIRBUS GAME JAM</p>
         <p>(Made for AIRBUS Game Jam)</p>
         <button onclick="PLAY8()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE8()" type="button">PAUSE</button>
         <video src="images/file8.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid8 = document.getElementById("File8"); 
-          function PLAY8() { 
-              vid8.play();
-              vid8.muted = false;
+        <script>
+          var vid8 = document.getElementById("File8");
+          function PLAY8() {
+            vid8.play();
+            vid8.muted = false;
           }
-          function PAUSE8() { 
-            vid8.pause(); 
+          function PAUSE8() {
+            vid8.pause();
           } 
-          </script>
-        </div>
+        </script>
+      </div>
 
 
-        <!-- GAME SLOT 9-->
+      <!-- GAME SLOT 9-->
       <div class="w3-center">
         <p>MULTIPLAYER IN UNITY</p>
         <p>(Prototype for an indevelopment Multiplayer Game)</p>
         <button onclick="PLAY9()" type="button">PLAY</button>
         <button style="background-color:black; color: white;" onclick="PAUSE9()" type="button">PAUSE</button>
         <video src="images/file9.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-        <script> 
-          var vid9 = document.getElementById("File9"); 
-          function PLAY9() { 
-              vid9.play();
-              vid9.muted = false;
+        <script>
+          var vid9 = document.getElementById("File9");
+          function PLAY9() {
+            vid9.play();
+            vid9.muted = false;
           }
-          function PAUSE9() { 
-            vid9.pause(); 
+          function PAUSE9() {
+            vid9.pause();
           } 
-          </script>
+        </script>
 
-        <a  href="images/JAYESH_NAKASKAR_CV.pdf" download>
+        <a href="images/JAYESH_NAKASKAR_CV.pdf" download>
           <button class="w3-button w3-light-grey w3-padding-large w3-section">
             <i class="fa fa-download"></i> Download Resume
           </button>
         </a>
-        
 
-      
-    <!-- End photo grid -->
+
+
+        <!-- End photo grid -->
+      </div>
+      <!-- End Portfolio Section -->
     </div>
-  <!-- End Portfolio Section -->
+    <!-- END PAGE CONTENT -->
   </div>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey w3-center" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: jnakaskar.jn@gmail.com</p>
-    </div><br>
-    <p>Let's get in touch. Send me a message:</p>
-
-    <form action= "mailto:jnakaskar.jn@gmail.com" method="post" enctype="text/plain">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
-
-
-<!-- END PAGE CONTENT -->
 </div>
-
 </body>
 </html>
