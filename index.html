@@ -499,173 +499,373 @@
       <div id="dropdownContent" style="display: none;">
         <!-- Grid for photos -->
         <div class="w3-row-padding" style="margin:0 -16px">
-          <!-- GAME SLOT 1-->
-          <div class="w3-center">
-            <p>KITTS HOG : Nightmare Of Life</p>
-            <p>(Made for a Game Jam)</p>
-            <button onclick="PLAY1()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE1()" type="button">PAUSE</button> <br>
-            <video src="images/file1.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid1 = document.getElementById("File1");
-              function PLAY1() {
-                vid1.play();
-                vid1.muted = false;
-              }
-              function PAUSE1() {
-                vid1.pause();
-              } 
-            </script>
 
-            <p>SAFFRON</p>
-            <p>(Made for a Game Jam)</p>
-            <button onclick="PLAY2()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE2()" type="button">PAUSE</button>
-            <video src="images/file2.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid2 = document.getElementById("File2");
-              function PLAY2() {
-                vid2.play();
-                vid2.muted = false;
-              }
-              function PAUSE2() {
-                vid2.pause();
-              } 
-            </script>
-          </div>
+            <!-- GAME SLOT 1-->
+            <div class="w3-center">
+              <p>SAFFRON</p>
+              <p>(Made for a Game Jam)</p>
+              <video src="images/file2.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo2(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer2"></div>
+              <script>
+                function loadVideo2(thumbnail) {
+                  var container = document.getElementById("videoContainer2");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
 
-          <!-- GAME SLOT 3-->
-          <div class="w3-center">
-            <p>DATA COMMUNICATION QUIZ GAME</p>
-            <p>(Made for a collage DCN Project based on PointLights.)</p>
-            <button onclick="PLAY3()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE3()" type="button">PAUSE</button>
-            <video src="images/file3.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid3 = document.getElementById("File3");
-              function PLAY3() {
-                vid3.play();
-                vid3.muted = false;
-              }
-              function PAUSE3() {
-                vid3.pause();
-              } 
-            </script>
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                                                                      <button onclick="PLAY2()" type="button">PLAY</button>
+                                                                                      <button style="background-color:black; color: white;" onclick="PAUSE2()" type="button">PAUSE</button> <br>
+                                                                                      <video src="images/file2.mp4" type="video/mp4" style="width:50%" id="File2" controls></video>
+                                                                                      `;
 
-            <p>TPS IN UNREAL</p>
-            <p>(Collision and Sound Trigger Prototype)</p>
-            <button onclick="PLAY4()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE4()" type="button">PAUSE</button>
-            <video src="images/file4.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid4 = document.getElementById("File4");
-              function PLAY4() {
-                vid4.play();
-                vid4.muted = false;
-              }
-              function PAUSE4() {
-                vid4.pause();
-              } 
-            </script>
-          </div>
+                    // Get the video element by its ID
+                    var vid2 = document.getElementById("File2");
 
+                    // Define the PLAY2 function to play the video and unmute it
+                    window.PLAY2 = function () {
+                      vid2.play();
+                      vid2.muted = false;
+                    };
 
-          <!-- GAME SLOT 5-->
-          <div class="w3-center">
-            <p>FIND ME</p>
-            <p>(Game made within 24 Hours)</p>
-            <button onclick="PLAY5()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE5()" type="button">PAUSE</button>
-            <video src="images/file5.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid5 = document.getElementById("File5");
-              function PLAY5() {
-                vid5.play();
-                vid5.muted = false;
-              }
-              function PAUSE5() {
-                vid5.pause();
-              } 
-            </script>
+                    // Define the PAUSE2 function to pause the video
+                    window.PAUSE2 = function () {
+                      vid2.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 2-->
+            <div class="w3-center">
+              <p>DATA COMMUNICATION QUIZ GAME</p>
+              <p>(Made for a collage DCN Project based on PointLights.)</p>
+              <video src="images/file3.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo3(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer3"></div>
+              <script>
+                function loadVideo3(thumbnail) {
+                  var container = document.getElementById("videoContainer3");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
 
-            <p>QUANTUM SPECTRUM</p>
-            <p>(Made for a Game Jam)</p>
-            <button onclick="PLAY6()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE6()" type="button">PAUSE</button>
-            <video src="images/file6.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid6 = document.getElementById("File6");
-              function PLAY6() {
-                vid6.play();
-                vid6.muted = false;
-              }
-              function PAUSE6() {
-                vid6.pause();
-              } 
-            </script>
-          </div>
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                                                                        <button onclick="PLAY3()" type="button">PLAY</button>
+                                                                                        <button style="background-color:black; color: white;" onclick="PAUSE3()" type="button">PAUSE</button> <br>
+                                                                                        <video src="images/file3.mp4" type="video/mp4" style="width:50%" id="File3" controls></video>
+                                                                                        `;
 
-          <!-- GAME SLOT 7-->
-          <div class="w3-center">
-            <p>AI IN UNREAL ENGINE</p>
-            <p>(AI Prototype in UnrealEngine for collage project)</p>
-            <button onclick="PLAY7()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE7()" type="button">PAUSE</button>
-            <video src="images/file7.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid7 = document.getElementById("File7");
-              function PLAY7() {
-                vid7.play();
-                vid7.muted = false;
-              }
-              function PAUSE7() {
-                vid7.pause();
-              } 
-            </script>
+                    // Get the video element by its ID
+                    var vid3 = document.getElementById("File3");
 
-            <p>AIRBUS GAME JAM</p>
-            <p>(Made for AIRBUS Game Jam)</p>
-            <button onclick="PLAY8()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE8()" type="button">PAUSE</button>
-            <video src="images/file8.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid8 = document.getElementById("File8");
-              function PLAY8() {
-                vid8.play();
-                vid8.muted = false;
-              }
-              function PAUSE8() {
-                vid8.pause();
-              } 
-            </script>
-          </div>
+                    // Define the PLAY3 function to play the video and unmute it
+                    window.PLAY3 = function () {
+                      vid3.play();
+                      vid3.muted = false;
+                    };
 
+                    // Define the PAUSE3 function to pause the video
+                    window.PAUSE3 = function () {
+                      vid3.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 3-->
+            <div class="w3-center">
+              <p>FIND ME</p>
+              <p>(Game made within 24 Hours)</p>
+              <video src="images/file5.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo5(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer5"></div>
+              <script>
+                function loadVideo5(thumbnail) {
+                  var container = document.getElementById("videoContainer5");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
 
-          <!-- GAME SLOT 9-->
-          <div class="w3-center">
-            <p>MULTIPLAYER IN UNITY</p>
-            <p>(Prototype for an indevelopment Multiplayer Game)</p>
-            <button onclick="PLAY9()" type="button">PLAY</button>
-            <button style="background-color:black; color: white;" onclick="PAUSE9()" type="button">PAUSE</button>
-            <video src="images/file9.mp4" type="video/mp4" style="width:100%" id=File1 controls></video>
-            <script>
-              var vid9 = document.getElementById("File9");
-              function PLAY9() {
-                vid9.play();
-                vid9.muted = false;
-              }
-              function PAUSE9() {
-                vid9.pause();
-              } 
-            </script>
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                                      <button onclick="PLAY5()" type="button">PLAY</button>
+                                                      <button style="background-color:black; color: white;" onclick="PAUSE5()" type="button">PAUSE</button> <br>
+                                                      <video src="images/file5.mp4" type="video/mp4" style="width:50%" id="File5" controls></video>
+                                                      `;
 
-            <a href="images/JAYESH_NAKASKAR_CV.pdf" download>
-              <button class="w3-button w3-light-grey w3-padding-large w3-section">
-                <i class="fa fa-download"></i> Download Resume
-              </button>
-            </a>
+                    // Get the video element by its ID
+                    var vid5 = document.getElementById("File5");
 
+                    // Define the PLAY5 function to play the video and unmute it
+                    window.PLAY5 = function () {
+                      vid5.play();
+                      vid5.muted = false;
+                    };
 
+                    // Define the PAUSE5 function to pause the video
+                    window.PAUSE5 = function () {
+                      vid5.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 4-->
+            <div class="w3-center">
+              <p>TPS IN UNREAL</p>
+              <p>(Collision and Sound Trigger Prototype)</p>
+              <video src="images/file4.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo4(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer4"></div>
+              <script>
+                function loadVideo4(thumbnail) {
+                  var container = document.getElementById("videoContainer4");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
+
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                                                                    <button onclick="PLAY4()" type="button">PLAY</button>
+                                                                                    <button style="background-color:black; color: white;" onclick="PAUSE4()" type="button">PAUSE</button> <br>
+                                                                                    <video src="images/file4.mp4" type="video/mp4" style="width:50%" id="File4" controls></video>
+                                                                                    `;
+
+                    // Get the video element by its ID
+                    var vid4 = document.getElementById("File4");
+
+                    // Define the PLAY4 function to play the video and unmute it
+                    window.PLAY4 = function () {
+                      vid4.play();
+                      vid4.muted = false;
+                    };
+
+                    // Define the PAUSE4 function to pause the video
+                    window.PAUSE4 = function () {
+                      vid4.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 5-->
+            <div class="w3-center">
+              <p>QUANTUM SPECTRUM</p>
+              <p>(Made for a Game Jam)</p>
+              <video src="images/file6.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo6(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer6"></div>
+              <script>
+                function loadVideo6(thumbnail) {
+                  var container = document.getElementById("videoContainer6");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
+
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                        <button onclick="PLAY6()" type="button">PLAY</button>
+                                        <button style="background-color:black; color: white;" onclick="PAUSE6()" type="button">PAUSE</button> <br>
+                                        <video src="images/file6.mp4" type="video/mp4" style="width:50%" id="File6" controls></video>
+                                        `;
+
+                    // Get the video element by its ID
+                    var vid6 = document.getElementById("File6");
+
+                    // Define the PLAY6 function to play the video and unmute it
+                    window.PLAY6 = function () {
+                      vid6.play();
+                      vid6.muted = false;
+                    };
+
+                    // Define the PAUSE6 function to pause the video
+                    window.PAUSE6 = function () {
+                      vid6.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 6-->
+            <div class="w3-center">
+              <p>AI IN UNREAL ENGINE</p>
+              <p>(AI Prototype in UnrealEngine for collage project)</p>
+              <video src="images/file7.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo7(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer7"></div>
+              <script>
+                function loadVideo7(thumbnail) {
+                  var container = document.getElementById("videoContainer7");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
+
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                <button onclick="PLAY7()" type="button">PLAY</button>
+                                <button style="background-color:black; color: white;" onclick="PAUSE7()" type="button">PAUSE</button> <br>
+                                <video src="images/file7.mp4" type="video/mp4" style="width:50%" id="File7" controls></video>
+                                `;
+
+                    // Get the video element by its ID
+                    var vid7 = document.getElementById("File7");
+
+                    // Define the PLAY7 function to play the video and unmute it
+                    window.PLAY7 = function () {
+                      vid7.play();
+                      vid7.muted = false;
+                    };
+
+                    // Define the PAUSE7 function to pause the video
+                    window.PAUSE7 = function () {
+                      vid7.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 7-->
+            <div class="w3-center">
+              <p>AIRBUS GAME JAM</p>
+              <p>(Made for AIRBUS Game Jam)</p>
+              <video src="images/file8.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo8(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer8"></div>
+              <script>
+                function loadVideo8(thumbnail) {
+                  var container = document.getElementById("videoContainer8");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
+
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                            <button onclick="PLAY8()" type="button">PLAY</button>
+                            <button style="background-color:black; color: white;" onclick="PAUSE8()" type="button">PAUSE</button> <br>
+                            <video src="images/file8.mp4" type="video/mp4" style="width:50%" id="File8" controls></video>
+                            `;
+
+                    // Get the video element by its ID
+                    var vid8 = document.getElementById("File8");
+
+                    // Define the PLAY8 function to play the video and unmute it
+                    window.PLAY8 = function () {
+                      vid8.play();
+                      vid8.muted = false;
+                    };
+
+                    // Define the PAUSE8 function to pause the video
+                    window.PAUSE8 = function () {
+                      vid8.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 8-->
+            <div class="w3-center">
+              <p>MULTIPLAYER IN UNITY</p>
+              <p>(Prototype for an indevelopment Multiplayer Game)</p>
+              <video src="images/file9.mp4" type="video/mp4" style="width:50%; height:auto; cursor:pointer;"
+                onclick="loadVideo9(this)" muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer9"></div>
+              <script>
+                function loadVideo9(thumbnail) {
+                  var container = document.getElementById("videoContainer9");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
+
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                            <button onclick="PLAY9()" type="button">PLAY</button>
+                            <button style="background-color:black; color: white;" onclick="PAUSE9()" type="button">PAUSE</button> <br>
+                            <video src="images/file9.mp4" type="video/mp4" style="width:50%" id="File9" controls></video>
+                            `;
+
+                    // Get the video element by its ID
+                    var vid9 = document.getElementById("File9");
+
+                    // Define the PLAY9 function to play the video and unmute it
+                    window.PLAY9 = function () {
+                      vid9.play();
+                      vid9.muted = false;
+                    };
+
+                    // Define the PAUSE9 function to pause the video
+                    window.PAUSE9 = function () {
+                      vid9.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+            
+            <!-- GAME SLOT 9-->
+            <div class="w3-center">
+              <p>KITTS HOG : Nightmare Of Life</p>
+              <p>(Made for a Game Jam)</p>
+              <video src="images/file1.mp4" type="video/mp4" style="width:50%; cursor:pointer;" onclick="loadVideo1(this)"
+                muted></video>
+              <p>Click the video to load the full player</p>
+              <div id="videoContainer1"></div>
+              <script>
+                function loadVideo1(thumbnail) {
+                  var container = document.getElementById("videoContainer1");
+                  if (!container.innerHTML) {
+                    // Hide the thumbnail
+                    thumbnail.style.display = "none";
+
+                    // Dynamically insert video player and controls into the container
+                    container.innerHTML = `
+                                                                                          <button onclick="PLAY1()" type="button">PLAY</button>
+                                                                                          <button style="background-color:black; color: white;" onclick="PAUSE1()" type="button">PAUSE</button> <br>
+                                                                                          <video src="images/file1.mp4" type="video/mp4" style="width:100%" id="File1" controls></video>
+                                                                                          `;
+
+                    // Get the video element by its ID
+                    var vid1 = document.getElementById("File1");
+
+                    // Define the PLAY1 function to play the video and unmute it
+                    window.PLAY1 = function () {
+                      vid1.play();
+                      vid1.muted = false;
+                    };
+
+                    // Define the PAUSE1 function to pause the video
+                    window.PAUSE1 = function () {
+                      vid1.pause();
+                    };
+                  }
+                }
+              </script>
+            </div>
+
+          <!--CV DOWNLOAD-->
+          <a href="images/JAYESH_NAKASKAR_CV.pdf" download>
+            <button class="w3-button w3-light-grey w3-padding-large w3-section">
+              <i class="fa fa-download"></i> Download Resume
+            </button>
+          </a>
 
             <!-- End photo grid -->
           </div>
