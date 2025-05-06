@@ -234,7 +234,7 @@
 
     <!-- Knowledge Section -->
     <div class="w3-padding-64 w3-content w3-center" id="knowledge">
-      <h2 class="w3-text-light-grey">WHAT I KNOW</h2>
+      <h2 class="w3-white w3-padding-16">WHAT I KNOW</h2>
       <hr class="w3-opacity">
 
       <!-- Grid for knowledge tables -->
@@ -262,10 +262,10 @@
       <!-- End Grid for knowledge tables -->
     </div>
     <!--END Knowledge Section -->
-
+    
     <!-- Portfolio Section -->
-    <div class="w3-padding-64 w3-content w3-center" id="photos">
-      <h2 class="w3-text-</div>light-grey">MY WORKS</h2>
+    <div class="w3-padding-0 w3-content w3-center" id="photos">
+      <h2 class="w3-white w3-padding-16">MY WORKS</h2>
       <hr>
 
       <!-- Work Section -->
@@ -507,13 +507,32 @@
       <div class="w3-center"></div>
 
       <!-- Game Video Section -->
-      <button onclick="toggleDropdown()" class="w3-button w3-light-grey w3-padding-large w3-section">
-        &#9660; WORK SHOWCASE
+      <button onclick="toggleDropdown(); this.classList.toggle('glow-animation', document.getElementById('dropdownContent').style.display === 'none');" class="w3-button w3-light-grey w3-padding-large w3-section glow-animation" style="font-size: 1.2em; padding: 16px 32px;">
+        &#9660;WORK SHOWCASE
       </button>
+      <style>
+        /* Add glow animation */
+        @keyframes glow {
+          0% {
+        box-shadow: 0 0 5px #fff;
+          }
+          50% {
+        box-shadow: 0 0 20px #fff;
+          }
+          100% {
+        box-shadow: 0 0 5px #fff;
+          }
+        }
+
+        .glow-animation {
+          animation: glow 1.5s infinite;
+          font-size: 1.2em;
+          padding: 16px 32px;
+        }
+      </style>
       <div id="dropdownContent" style="display: none;">
         <!-- Grid for photos -->
         <div class="w3-row-padding" style="margin:0 -16px">
-
           <!-- GAME SLOT 1-->
           <div class="w3-center">
             <p
@@ -930,8 +949,6 @@
               }
             </script>
           </div>
-
-
           <!-- Separator -->
           <div class="w3-center w3-padding-32">
             <hr style="border: 1px solid white; width: 80%; margin: 0 auto;">
@@ -941,10 +958,9 @@
         <!-- End Portfolio Section -->
       </div>
     </div>
-    <!--END Portfolio Section -->
 
     <!-- Contact Section -->
-    <div class="w3-padding-64 w3-content w3-text-grey w3-center" id="contact">
+    <div class="w3-padding-0 w3-content w3-text-grey w3-center" id="contact">
       <!-- CV DOWNLOAD -->
       <a href="images/JAYESH_NAKASKAR_CV.pdf" download>
         <button class="w3-button w3-light-grey w3-padding-large w3-section">
