@@ -460,7 +460,7 @@
       <h1 class="w3-jumbo">Nakaskar </h1>
       <p>Programmer and Game Developer.</p>
       <!-- 3D portrait container (replaces static image) -->
-      <div id="portrait-3d-scene" style="width:100%; max-width:600px; height:600px; margin:0 auto; border-radius:10%; overflow:hidden; background:#111;">
+      <div id="portrait-3d-scene" style="width:110%; max-width:600px; height:600px; margin:0 auto; border-radius:10%; overflow:hidden; background:#000000;">
         <div id="portrait3d-container" style="width:100%; height:100%;"></div>
         <img src="images/LOGO_BACKGROUND.png" alt="Portrait of Jayesh Nakaskar" class="portrait-fallback" style="width:100%; height:100%; border-radius:10%; display:block; object-fit:cover;">
       </div>
@@ -1855,7 +1855,7 @@
           radius += e.deltaY * 0.002;
           radius = Math.max(controls.minDistance, Math.min(controls.maxDistance, radius));
         }
-        renderer.domElement.style.touchAction = 'none';
+        renderer.domElement.style.touchAction = 'pan-y';
         renderer.domElement.addEventListener('pointerdown', onPointerDown);
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('pointerup', onPointerUp);
