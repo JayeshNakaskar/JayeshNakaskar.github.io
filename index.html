@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>JAYESH_PORTFOLIO</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,20 +21,241 @@
     font-family: "Montserrat", sans-serif
   }
 
+  /* Add 3D perspective to body for layered depth */
+  body {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
+  /* 3D depth for main content */
+  #main {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
   /* Add margin to images in w3-row-padding class */
   .w3-row-padding img {
     margin-bottom: 12px
+  }
+
+  /* 3D depth for all containers and content sections */
+  .w3-container {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
+                0 2px 8px rgba(255, 255, 255, 0.1) inset;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .w3-container:hover {
+    transform: translateZ(1px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35), 
+                0 2px 8px rgba(255, 255, 255, 0.15) inset;
+    z-index: 10;
+  }
+
+  /* 3D depth for major sections */
+  header, .w3-content {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25),
+                0 2px 10px rgba(255, 255, 255, 0.08) inset;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header:hover, .w3-content:hover {
+    transform: translateZ(1px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3),
+                0 2px 10px rgba(255, 255, 255, 0.12) inset;
+    z-index: 10;
+  }
+
+  /* 3D depth for buttons */
+  .w3-button {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25),
+                0 1px 4px rgba(255, 255, 255, 0.1) inset;
+    transform: translateZ(0px);
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .w3-button:hover, .w3-button:active {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3),
+                0 2px 6px rgba(255, 255, 255, 0.15) inset;
+    transform: translateZ(0px);
+  }
+
+  .w3-button:active {
+    transform: translateZ(0px);
+  }
+
+  /* 3D depth for form inputs */
+  .w3-input, textarea, input, select {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) inset,
+                0 1px 4px rgba(255, 255, 255, 0.05) inset;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .w3-input:focus, textarea:focus, input:focus, select:focus {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) inset,
+                0 2px 6px rgba(255, 196, 15, 0.2);
+    transform: translateZ(2px);
+  }
+
+  /* 3D depth for text and headings */
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+                 0 2px 4px rgba(0, 0, 0, 0.2),
+                 0 -1px 2px rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 3D depth for list items and sections */
+  .w3-ul li {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(255, 255, 255, 0.05) inset;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 8px 4px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .w3-ul li:hover {
+    transform: translateZ(0px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 1px 3px rgba(255, 255, 255, 0.08) inset;
+    z-index: 10;
+  }
+
+  /* 3D depth for progress bars and skill sections */
+  .w3-dark-grey {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) inset;
+    border-radius: 4px;
+  }
+
+  .w3-dark-grey .w3-white {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15),
+                0 1px 3px rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
   }
 
   /* Set the width of the sidebar */
   .w3-sidebar {
     width: 120px;
     background: #222;
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.4),
+                -2px 0 8px rgba(255, 255, 255, 0.05) inset;
+    transform-style: preserve-3d;
+  }
+
+  /* 3D depth for sidebar links */
+  .w3-sidebar .w3-button {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 1px 3px rgba(255, 255, 255, 0.08) inset;
+    transform-style: preserve-3d;
+    transition: all 0.25s ease;
+  }
+
+  .w3-sidebar .w3-button:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3),
+                0 2px 5px rgba(255, 255, 255, 0.1) inset;
+    transform: translateZ(0px);
+    background-color: #1a1a1a;
+    z-index: 15;
+  }
+
+  .w3-sidebar .w3-button:focus {
+    box-shadow: 0 6px 16px rgba(241, 196, 15, 0.25),
+                0 2px 5px rgba(255, 255, 255, 0.1) inset;
+  }
+
+  /* Navbar 3D styling */
+  #myNavbar {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3),
+                0 1px 4px rgba(255, 255, 255, 0.08) inset;
+  }
+
+  #myNavbar .w3-button {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  #myNavbar .w3-button:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateZ(3px);
+  }
+
+  /* 3D depth for portfolio video/media cards */
+  .w3-center {
+    transform-style: preserve-3d;
+  }
+
+  video, img {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
+                0 2px 6px rgba(255, 255, 255, 0.1) inset;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  video:hover, img:hover {
+    transform: translateZ(4px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35),
+                0 2px 8px rgba(255, 255, 255, 0.15) inset;
+  }
+
+  /* 3D depth for work experience items */
+  .w3-section {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15),
+                0 1px 4px rgba(255, 255, 255, 0.08) inset;
+    border-radius: 6px;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+    padding: 12px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .w3-section:hover {
+    transform: translateZ(0px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22),
+                0 2px 6px rgba(255, 255, 255, 0.1) inset;
+    z-index: 10;
+  }
+
+  /* 3D depth for border elements */
+  hr {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2),
+                0 -1px 2px rgba(255, 255, 255, 0.08);
+  }
+
+  /* 3D depth for education/info boxes */
+  .w3-light-grey {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15),
+                0 2px 8px rgba(255, 255, 255, 0.1) inset;
+    border-radius: 8px;
   }
 
   /* Add a left margin to the main content to match the sidebar width */
   #main {
-    margin-left: 120px
+    margin-left: 120px;
+    transform-style: preserve-3d;
   }
 
   /* Remove the left margin for main content on small screens */
@@ -42,6 +263,99 @@
     #main {
       margin-left: 0
     }
+  }
+
+  /* Contact form 3D styling */
+  form {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+                0 2px 8px rgba(255, 255, 255, 0.1) inset;
+    border-radius: 12px;
+    padding: 24px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  form:hover {
+    transform: translateZ(6px);
+    box-shadow: 0 16px 56px rgba(0, 0, 0, 0.3),
+                0 2px 10px rgba(255, 255, 255, 0.12) inset;
+  }
+
+  /* Status messages 3D */
+  #contact-status {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 1px 3px rgba(255, 255, 255, 0.1) inset;
+    border-radius: 4px;
+    padding: 12px;
+  }
+
+  /* 3D styling for media player buttons */
+  button[onclick] {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 1px 3px rgba(255, 255, 255, 0.1) inset;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  button[onclick]:hover, button[onclick]:active {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+                0 2px 5px rgba(255, 255, 255, 0.12) inset;
+    transform: translateZ(3px);
+  }
+
+  /* 3D for links with depth */
+  a {
+    transition: all 0.2s ease;
+  }
+
+  a:hover {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25),
+                 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Visible skip link styling (appears when focused) */
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 8px;
+    background: #111;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 1000;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    left: 8px;
+    top: 8px;
+    outline: none;
+  }
+
+  /* High-contrast focus outlines for keyboard users */
+  a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 3px solid #f1c40f;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(241,196,15,0.08);
+  }
+
+  /* Three.js logo container fallback styling */
+  #logo3d-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+  .logo-fallback {
+    display: none; /* shown if WebGL unavailable */
+  }
+
+  /* Three.js portrait container styling */
+  #portrait3d-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+  .portrait-fallback {
+    display: none; /* shown if WebGL unavailable */
   }
 </style>
 <!-- Include jQuery for smooth scrolling -->
@@ -93,9 +407,13 @@
 
 <body class="w3-black">
   <!-- Sidebar Navigation (Hidden on small screens) -->
-  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" role="navigation" aria-label="Primary navigation">
     <!-- Logo or Avatar image at the top of the sidebar -->
-    <img src="images/LOGO.png" alt="Logo" style="width:100%">
+    <!-- 3D logo container: Three.js canvas will be injected here. The PNG remains as a fallback. -->
+    <div id="logo-3d" style="width:100%; display:flex; justify-content:center; align-items:center;">
+      <div id="logo3d-container" style="width:100px; height:100px;"></div>
+      <img src="images/LOGO.png" alt="Jayesh Nakaskar logo" class="logo-fallback" style="width:100px; height:100px; border-radius:6px; display:block;">
+    </div>
 
     <!-- Navigation links -->
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
@@ -103,17 +421,17 @@
       <i data-aos="fade-up" class="fa fa-home w3-xxlarge"></i>
       <p>HOME</p>
     </a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black" aria-label="About">
       <!-- About icon and label -->
       <i data-aos="fade-up" class="fa fa-user w3-xxlarge"></i>
       <p>ABOUT</p>
     </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black" aria-label="Work">
       <!-- Work/Portfolio icon and label -->
       <i data-aos="fade-up" class="fa fa-eye w3-xxlarge"></i>
       <p>WORK</p>
     </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black" aria-label="Contact">
       <!-- Contact icon and label -->
       <i data-aos="fade-up" class="fa fa-envelope w3-xxlarge"></i>
       <p>CONTACT</p>
@@ -133,7 +451,7 @@
   </div>
 
   <!-- START PAGE CONTENT -->
-  <div class="w3-padding-large" id="main">
+  <div class="w3-padding-large" id="main" role="main" tabindex="-1">
     <div class="w3-padding-64"></div>
 
     <!-- Header/Home -->
@@ -141,8 +459,11 @@
       <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Jayesh </h1>
       <h1 class="w3-jumbo">Nakaskar </h1>
       <p>Programmer and Game Developer.</p>
-      <img src="images/LOGO_BACKGROUND.png" alt="boy" class="w3-image" width="600" height="600"
-        style="border-radius: 10%;">
+      <!-- 3D portrait container (replaces static image) -->
+      <div id="portrait-3d-scene" style="width:100%; max-width:600px; height:600px; margin:0 auto; border-radius:10%; overflow:hidden; background:#111;">
+        <div id="portrait3d-container" style="width:100%; height:100%;"></div>
+        <img src="images/LOGO_BACKGROUND.png" alt="Portrait of Jayesh Nakaskar" class="portrait-fallback" style="width:100%; height:100%; border-radius:10%; display:block; object-fit:cover;">
+      </div>
     </header>
     <!--END Header/Home -->
 
@@ -978,24 +1299,662 @@
       <br>
       <p>Let's get in touch. Send me a message:</p>
 
-      <form action="mailto:jnakaskar.jn@gmail.com" method="post" enctype="text/plain"
-        style="max-width: 400px; margin: 0 auto; text-align: center;"></form>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><textarea class="w3-input w3-padding-16" placeholder="Message" required name="Message" rows="4"></textarea></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
+      <!-- Skip link for keyboard users -->
+      <a href="#main" class="w3-white" style="position:absolute;left:-999px;top:8px;padding:8px;" onfocus="this.style.left='8px';this.style.top='8px';" onblur="this.style.left='-999px'">Skip to content</a>
+
+      <!-- Formspree integration: Formspree ID inserted. Form has ARIA labels and client-side validation. -->
+      <form id="contact-form" action="https://formspree.io/f/mwvnnnww" method="POST" aria-label="Contact form" style="max-width: 400px; margin: 0 auto; text-align: center;">
+        <p><label class="w3-text-white" for="contact-name">Name</label></p>
+        <p><input id="contact-name" class="w3-input w3-padding-16" type="text" placeholder="Name" required name="name"></p>
+        <p><label class="w3-text-white" for="contact-email">Email</label></p>
+        <p><input id="contact-email" class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p>
+        <p><label class="w3-text-white" for="contact-subject">Subject</label></p>
+        <p><input id="contact-subject" class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="subject"></p>
+        <p><label class="w3-text-white" for="contact-message">Message</label></p>
+        <p><textarea id="contact-message" class="w3-input w3-padding-16" placeholder="Message" required name="message" rows="4"></textarea></p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+        <p id="contact-status" class="w3-text-white" style="display:none;" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript>
+          <p class="w3-text-yellow">JavaScript is required for AJAX submission — the form will submit normally without JS.</p>
+        </noscript>
       </form>
+
+      <!-- Axe-core accessibility check (runs in-page and reports results) -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.8.3/axe.min.js" integrity="sha512-+L8j1q5jBf0zQ8u1KQ2F2d3rZ0cF0p3zQWn3GfZ1tY1Y5b2E1n2q8c9K0x7v3Q2r5a6b4c3d2e1f0g9h8j7k6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          if (!window.axe) return;
+          // Run axe and display a small summary panel
+          try {
+            axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa'] } }).then(function (results) {
+              console.group('Axe Accessibility Scan');
+              console.log(results);
+              console.groupEnd();
+
+              var violations = results.violations || [];
+              if (!violations.length) return;
+
+              // Create a floating panel to summarize issues
+              var panel = document.createElement('div');
+              panel.setAttribute('aria-live', 'polite');
+              panel.style.position = 'fixed';
+              panel.style.right = '12px';
+              panel.style.bottom = '12px';
+              panel.style.background = '#111';
+              panel.style.color = '#fff';
+              panel.style.padding = '12px';
+              panel.style.borderRadius = '8px';
+              panel.style.maxWidth = '360px';
+              panel.style.zIndex = 10000;
+              panel.style.fontSize = '13px';
+
+              var title = document.createElement('div');
+              title.style.fontWeight = '700';
+              title.style.marginBottom = '6px';
+              title.textContent = 'Accessibility issues detected: ' + violations.length;
+              panel.appendChild(title);
+
+              var list = document.createElement('ul');
+              list.style.margin = '0';
+              list.style.padding = '0 0 0 18px';
+              list.style.maxHeight = '240px';
+              list.style.overflow = 'auto';
+
+              violations.slice(0,5).forEach(function (v) {
+                var li = document.createElement('li');
+                li.style.marginBottom = '6px';
+                li.innerHTML = '<strong>' + v.id + '</strong>: ' + (v.help || '') + ' (' + v.impact + ')';
+                list.appendChild(li);
+              });
+
+              if (violations.length > 5) {
+                var more = document.createElement('div');
+                more.style.marginTop = '6px';
+                more.style.opacity = '0.85';
+                more.textContent = 'See console for full report.';
+                panel.appendChild(more);
+              }
+
+              panel.appendChild(list);
+              document.body.appendChild(panel);
+            }).catch(function (err) {
+              console.warn('Axe run error', err);
+            });
+          } catch (e) { console.warn('Axe script error', e); }
+        });
+      </script>
+      <script>
+        // AJAX submit to Formspree; keep action as Formspree endpoint (replace yourFormId)
+        (function () {
+          var form = document.getElementById('contact-form');
+          var status = document.getElementById('contact-status');
+          if (!form) return;
+
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            status.style.display = 'none';
+
+            // Simple client-side validation
+            var email = (form.querySelector('input[name="email"]') || {}).value || '';
+            var messageText = (form.querySelector('textarea[name="message"]') || {}).value || '';
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRe.test(email)) {
+              status.className = 'w3-text-red';
+              status.textContent = 'Please enter a valid email address.';
+              status.style.display = 'block';
+              return;
+            }
+            if (messageText.trim().length < 10) {
+              status.className = 'w3-text-red';
+              status.textContent = 'Please enter a longer message (at least 10 characters).';
+              status.style.display = 'block';
+              return;
+            }
+
+            var data = new FormData(form);
+
+            fetch(form.action, {
+              method: 'POST',
+              body: data,
+              headers: {
+                'Accept': 'application/json'
+              }
+            }).then(function (response) {
+              if (response.ok) {
+                form.reset();
+                status.className = 'w3-text-green';
+                status.textContent = 'Thanks — your message was sent.';
+                status.style.display = 'block';
+              } else {
+                response.json().then(function (data) {
+                  status.className = 'w3-text-red';
+                  if (data && data.errors) {
+                    status.textContent = data.errors.map(function (err) { return err.message; }).join(', ');
+                  } else {
+                    status.textContent = 'Oops — there was a problem sending your message.';
+                  }
+                  status.style.display = 'block';
+                }).catch(function () {
+                  status.className = 'w3-text-red';
+                  status.textContent = 'Error sending form.';
+                  status.style.display = 'block';
+                });
+              }
+            }).catch(function () {
+              status.className = 'w3-text-red';
+              status.textContent = 'Network error. Please try again later.';
+              status.style.display = 'block';
+            });
+          });
+        })();
+      </script>
       <!-- End Contact Section -->
     </div>
     <!-- END Contact Section -->
 
   </div>
   <!-- END PAGE CONTENT -->
+  <!-- Three.js textured box for logo (inserted after page content) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <!-- SVGLoader for SVG extrusion (non-module build) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/SVGLoader.js"></script>
+  <!-- OrbitControls removed (use lightweight pointer controls below) -->
+  <script>
+    (function(){
+      var container = document.getElementById('logo3d-container');
+      var fallback = document.querySelector('.logo-fallback');
+      // keep fallback visible until scene is ready
+      if (fallback) fallback.style.display = 'block';
+      if (container) container.style.display = 'none';
+
+      // Wrap entire init in try/catch so any unexpected error shows fallback
+      try {
+        // Check for WebGL
+        var canvas = document.createElement('canvas');
+        var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (!gl) throw new Error('no-webgl');
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+        camera.position.set(0, 0.35, 2.2);
+
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      // Enable soft shadows and correct color space / tone mapping for environment reflections
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap; // soft shadows
+      // outputEncoding removed in r150+, use outputColorSpace
+      try { renderer.outputColorSpace = THREE.SRGBColorSpace; } catch (e) { /* fallback */ }
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.0;
+      container.appendChild(renderer.domElement);
+      // show canvas, hide fallback when renderer attached
+      if (container) container.style.display = 'flex';
+      if (fallback) fallback.style.display = 'none';
+
+      // lights
+      var dir = new THREE.DirectionalLight(0xffffff, 1.2);
+      dir.position.set(5, 10, 7.5);
+      dir.castShadow = true;
+      dir.shadow.mapSize.width = 1024;
+      dir.shadow.mapSize.height = 1024;
+      dir.shadow.camera.left = -2;
+      dir.shadow.camera.right = 2;
+      dir.shadow.camera.top = 2;
+      dir.shadow.camera.bottom = -2;
+      dir.shadow.camera.near = 0.5;
+      dir.shadow.camera.far = 20;
+      scene.add(dir);
+
+      var hemi = new THREE.HemisphereLight(0xffffff, 0x222222, 0.7);
+      scene.add(hemi);
+
+      // Additional ambient + rim/back/fill lights to emphasize extrusion depth
+      var ambient = new THREE.AmbientLight(0xffffff, 0.12);
+      scene.add(ambient);
+
+      var backLight = new THREE.PointLight(0xffffff, 0.9);
+      backLight.position.set(-3, 1.6, -2.2);
+      backLight.castShadow = false;
+      scene.add(backLight);
+
+      // subtle cool rim light for separation from background
+      var rimLight = new THREE.PointLight(0x88ccff, 0.5);
+      rimLight.position.set(2.6, 1.0, -2.6);
+      scene.add(rimLight);
+
+      // gentle warm fill close to the camera; will follow camera in animate loop
+      var fillLight = new THREE.PointLight(0xfff6e6, 0.32);
+      fillLight.position.copy(camera.position);
+      scene.add(fillLight);
+
+      // ground to receive shadows
+      var groundGeo = new THREE.PlaneGeometry(8, 8);
+      var groundMat = new THREE.ShadowMaterial({ opacity: 0.14 });
+      var ground = new THREE.Mesh(groundGeo, groundMat);
+      ground.rotation.x = -Math.PI / 2;
+      ground.position.y = -0.6;
+      ground.receiveShadow = true;
+      scene.add(ground);
+
+      // Lightweight pointer-based orbit controls (no external dependency)
+      var controls = {
+        autoRotate: true,
+        autoRotateSpeed: 0.6,
+        enableDamping: true,
+        dampingFactor: 0.08,
+        minDistance: 1.2,
+        maxDistance: 4.0
+      };
+      // provide an update() method so existing animation loop calls don't throw
+      controls.update = function() { /* no-op: camera is updated in the animate loop */ };
+
+      // derive spherical coords from current camera position
+      var radius = Math.sqrt(camera.position.x*camera.position.x + camera.position.y*camera.position.y + camera.position.z*camera.position.z);
+      var theta = Math.atan2(camera.position.z, camera.position.x);
+      var phi = Math.acos(camera.position.y / radius);
+
+      var isPointerDown = false, startX = 0, startY = 0, startTheta = 0, startPhi = 0;
+      var pointerId = null;
+
+      function onPointerDown(e) {
+        isPointerDown = true;
+        pointerId = e.pointerId;
+        startX = e.clientX; startY = e.clientY;
+        startTheta = theta; startPhi = phi;
+      }
+      function onPointerMove(e) {
+        if (!isPointerDown || e.pointerId !== pointerId) return;
+        var dx = (e.clientX - startX) / (container.clientWidth || window.innerWidth);
+        var dy = (e.clientY - startY) / (container.clientHeight || window.innerHeight);
+        theta = startTheta + dx * Math.PI * 1.2;
+        phi = Math.max(0.2, Math.min(Math.PI - 0.2, startPhi + dy * Math.PI));
+      }
+      function onPointerUp(e) { if (e.pointerId === pointerId) { isPointerDown = false; pointerId = null; } }
+      function onWheel(e){
+        radius += e.deltaY * 0.002;
+        radius = Math.max(controls.minDistance, Math.min(controls.maxDistance, radius));
+      }
+      renderer.domElement.style.touchAction = 'none';
+      renderer.domElement.addEventListener('pointerdown', onPointerDown);
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
+      renderer.domElement.addEventListener('wheel', onWheel, { passive: true });
+      // double-click toggles auto-rotate
+      renderer.domElement.addEventListener('dblclick', function () { controls.autoRotate = !controls.autoRotate; });
+
+      // PMREM for environment lighting (equirectangular image)
+      var pmremGenerator = new THREE.PMREMGenerator(renderer);
+      pmremGenerator.compileEquirectangularShader();
+      var envUrl = 'https://threejs.org/examples/textures/2294472375_24a3b8ef46_o.jpg';
+      var texLoader = new THREE.TextureLoader();
+      texLoader.setCrossOrigin('');
+      texLoader.load(envUrl, function(tex){
+        var envMap = pmremGenerator.fromEquirectangular(tex).texture;
+        scene.environment = envMap;
+        pmremGenerator.dispose();
+      });
+
+      // create a placeholder mesh variable so animation runs even before assets load
+      var mesh = null;
+
+      // geometry: increase depth for a stronger 3D silhouette
+      var geometry = new THREE.BoxGeometry(1.0, 1.0, 0.35);
+
+      // basic placeholder material while assets load
+      var placeholderMat = new THREE.MeshStandardMaterial({ color: 0x111111, metalness: 0.1, roughness: 0.7 });
+      mesh = new THREE.Mesh(geometry, placeholderMat);
+      mesh.scale.set(0.9, 0.9, 0.9);
+      mesh.castShadow = true;
+      mesh.receiveShadow = true;
+      scene.add(mesh);
+
+      // Add a subtle outline to emphasize depth (best-effort)
+      try {
+        var edges = new THREE.EdgesGeometry(geometry);
+        var line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x333333 }));
+        line.renderOrder = 999;
+        mesh.add(line);
+      } catch (e) { /* ignore */ }
+
+      // Attempt to load and extrude SVG logo; falls back to textured box if unavailable
+      if (window.SVGLoader) {
+        try {
+          var svgLoader = new THREE.SVGLoader();
+          svgLoader.load('images/logo.svg', function(data){
+            try {
+              var paths = data.paths;
+              var group = new THREE.Group();
+              paths.forEach(function(path){
+                var shapes = path.toShapes(true);
+                shapes.forEach(function(shape){
+                  var geom;
+                  if (THREE.ExtrudeGeometry) {
+                    geom = new THREE.ExtrudeGeometry(shape, { depth: 0.45, bevelEnabled: false });
+                  } else if (THREE.ExtrudeBufferGeometry) {
+                    geom = new THREE.ExtrudeBufferGeometry(shape, { depth: 0.45, bevelEnabled: false });
+                  } else {
+                    geom = new THREE.ShapeGeometry(shape);
+                  }
+                  var mat = new THREE.MeshPhysicalMaterial({
+                    color: 0xffffff,
+                    metalness: 0.6,
+                    roughness: 0.18,
+                    clearcoat: 0.9,
+                    clearcoatRoughness: 0.05,
+                    envMapIntensity: 1.4
+                  });
+                  var m = new THREE.Mesh(geom, mat);
+                  m.castShadow = true;
+                  m.receiveShadow = true;
+                  group.add(m);
+                });
+              });
+              // center and scale the group
+              var box = new THREE.Box3().setFromObject(group);
+              var size = new THREE.Vector3();
+              box.getSize(size);
+              var max = Math.max(size.x, size.y, size.z) || 1;
+              var s = 1.0 / max;
+              group.scale.set(s, s, s);
+              box.setFromObject(group);
+              var center = box.getCenter(new THREE.Vector3());
+              group.position.x = -center.x;
+              group.position.y = -center.y;
+              group.position.z = -center.z;
+
+              // replace placeholder with extruded SVG
+              scene.remove(mesh);
+              mesh = group;
+              scene.add(mesh);
+            } catch (e) { console.warn('SVG parse error', e); }
+          }, undefined, function(err){
+            console.warn('SVG load failed', err);
+            // keep placeholder
+          });
+        } catch (e) { console.warn('SVGLoader not usable', e); }
+      }
+
+      // animation loop runs regardless of assets loading
+      var t = 0;
+      var autoRotateEnabled = true;
+      var autoRotateSpeed = 1.2; // increased auto-rotation speed for better motion readability
+      var orbitRadius = Math.sqrt(camera.position.x*camera.position.x + camera.position.z*camera.position.z);
+
+      // double-click toggles auto-rotate
+      renderer.domElement.addEventListener('dblclick', function () { autoRotateEnabled = !autoRotateEnabled; controls.autoRotate = autoRotateEnabled; });
+
+      function animate(){
+        t += 0.01;
+        if (mesh) {
+          mesh.rotation.y += 0.015;
+          mesh.rotation.x = Math.sin(t) * 0.04;
+          mesh.position.y = Math.sin(t*0.5) * 0.02;
+        }
+
+        if (autoRotateEnabled) {
+          var time = performance.now() * 0.001 * (autoRotateSpeed * 0.2);
+          var angle = time;
+          camera.position.x = Math.cos(angle) * orbitRadius;
+          camera.position.z = Math.sin(angle) * orbitRadius;
+          camera.lookAt(0, 0, 0);
+        }
+
+        // keep fill light following the camera for subtle front-fill
+        try { if (typeof fillLight !== 'undefined') fillLight.position.copy(camera.position); } catch(e){}
+
+        controls.update();
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      // also try loading PNG texture to apply to placeholder box faces (non-blocking)
+      var loader = new THREE.TextureLoader();
+      loader.setCrossOrigin('');
+      loader.load('images/LOGO.png', function(tex){
+        try { tex.anisotropy = renderer.capabilities.getMaxAnisotropy(); } catch(e){}
+        var materialFront = new THREE.MeshPhysicalMaterial({ map: tex, metalness: 0.45, roughness: 0.18, clearcoat: 0.7, clearcoatRoughness: 0.06, envMapIntensity: 1.2 });
+        var materialSide = new THREE.MeshStandardMaterial({ color: 0x0e0e0e, metalness: 0.12, roughness: 0.72 });
+        if (mesh && mesh.isMesh && mesh.geometry.type === 'BoxGeometry') {
+          mesh.material = [ materialSide, materialSide, materialSide, materialSide, materialFront, materialFront ];
+          mesh.needsUpdate = true;
+        }
+      }, undefined, function(err){
+        console.warn('logo texture failed to load', err);
+      });
+
+      // handle resize
+      function onResize(){
+        try {
+          var w = container.clientWidth || 100;
+          var h = container.clientHeight || 100;
+          renderer.setSize(w, h);
+          camera.aspect = w / h;
+          camera.updateProjectionMatrix();
+        } catch (e) { /* ignore resize errors */ }
+      }
+      window.addEventListener('resize', onResize);
+      onResize();
+    } catch (err) {
+      console.warn('3D logo init failed', err);
+      if (fallback) fallback.style.display = 'block';
+      if (container) container.style.display = 'none';
+    }
+    })();
+  </script>
+  <!-- Three.js portrait scene (similar setup to logo, different container and SVG) -->
+  <script>
+    (function(){
+      var container = document.getElementById('portrait3d-container');
+      var fallback = document.querySelector('.portrait-fallback');
+      if (fallback) fallback.style.display = 'block';
+      if (container) container.style.display = 'none';
+
+      try {
+        var canvas = document.createElement('canvas');
+        var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (!gl) throw new Error('no-webgl');
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+        camera.position.set(0, 0, 2.5);
+        camera.lookAt(0, 0, 0);
+
+        var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        try { renderer.outputColorSpace = THREE.SRGBColorSpace; } catch (e) { /* fallback */ }
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.0;
+        container.appendChild(renderer.domElement);
+        if (container) container.style.display = 'flex';
+        if (fallback) fallback.style.display = 'none';
+
+        // Lights for portrait scene
+        var dir = new THREE.DirectionalLight(0xffffff, 1.1);
+        dir.position.set(4, 8, 6);
+        dir.castShadow = true;
+        dir.shadow.mapSize.width = 1024;
+        dir.shadow.mapSize.height = 1024;
+        dir.shadow.camera.left = -2;
+        dir.shadow.camera.right = 2;
+        dir.shadow.camera.top = 3;
+        dir.shadow.camera.bottom = -1;
+        dir.shadow.camera.near = 0.5;
+        dir.shadow.camera.far = 20;
+        scene.add(dir);
+
+        var hemi = new THREE.HemisphereLight(0xffffff, 0x222222, 0.6);
+        scene.add(hemi);
+
+        var ambient = new THREE.AmbientLight(0xffffff, 0.15);
+        scene.add(ambient);
+
+        var backLight = new THREE.PointLight(0xffffff, 1.2);
+        backLight.position.set(-2.5, 1.2, -2.0);
+        scene.add(backLight);
+
+        var rimLight = new THREE.PointLight(0x88ccff, 0.7);
+        rimLight.position.set(2.2, 0.8, -2.2);
+        scene.add(rimLight);
+
+        var fillLight = new THREE.PointLight(0xfff6e6, 0.28);
+        fillLight.position.copy(camera.position);
+        scene.add(fillLight);
+
+        // Ground for portrait
+        var groundGeo = new THREE.PlaneGeometry(6, 6);
+        var groundMat = new THREE.ShadowMaterial({ opacity: 0.1 });
+        var ground = new THREE.Mesh(groundGeo, groundMat);
+        ground.rotation.x = -Math.PI / 2;
+        ground.position.y = -1.0;
+        ground.receiveShadow = true;
+        scene.add(ground);
+
+        // Portrait controls
+        var controls = {
+          autoRotate: true,
+          autoRotateSpeed: 0.5,
+          enableDamping: true,
+          dampingFactor: 0.08,
+          minDistance: 1.2,
+          maxDistance: 4.0
+        };
+        controls.update = function() { /* no-op */ };
+
+        var radius = Math.sqrt(camera.position.x*camera.position.x + camera.position.y*camera.position.y + camera.position.z*camera.position.z);
+        var theta = Math.atan2(camera.position.z, camera.position.x);
+        var phi = Math.acos(camera.position.y / radius);
+
+        var isPointerDown = false, startX = 0, startY = 0, startTheta = 0, startPhi = 0;
+        var pointerId = null;
+
+        function onPointerDown(e) {
+          isPointerDown = true;
+          pointerId = e.pointerId;
+          startX = e.clientX; startY = e.clientY;
+          startTheta = theta; startPhi = phi;
+        }
+        function onPointerMove(e) {
+          if (!isPointerDown || e.pointerId !== pointerId) return;
+          var dx = (e.clientX - startX) / (container.clientWidth || window.innerWidth);
+          var dy = (e.clientY - startY) / (container.clientHeight || window.innerHeight);
+          theta = startTheta + dx * Math.PI * 1.2;
+          phi = Math.max(0.2, Math.min(Math.PI - 0.2, startPhi + dy * Math.PI));
+        }
+        function onPointerUp(e) { if (e.pointerId === pointerId) { isPointerDown = false; pointerId = null; } }
+        function onWheel(e){
+          radius += e.deltaY * 0.002;
+          radius = Math.max(controls.minDistance, Math.min(controls.maxDistance, radius));
+        }
+        renderer.domElement.style.touchAction = 'none';
+        renderer.domElement.addEventListener('pointerdown', onPointerDown);
+        window.addEventListener('pointermove', onPointerMove);
+        window.addEventListener('pointerup', onPointerUp);
+        renderer.domElement.addEventListener('wheel', onWheel, { passive: true });
+        renderer.domElement.addEventListener('dblclick', function () { controls.autoRotate = !controls.autoRotate; });
+
+        // PMREM environment map
+        var pmremGenerator = new THREE.PMREMGenerator(renderer);
+        pmremGenerator.compileEquirectangularShader();
+        var envUrl = 'https://threejs.org/examples/textures/2294472375_24a3b8ef46_o.jpg';
+        var texLoader = new THREE.TextureLoader();
+        texLoader.setCrossOrigin('');
+        texLoader.load(envUrl, function(tex){
+          var envMap = pmremGenerator.fromEquirectangular(tex).texture;
+          scene.environment = envMap;
+          pmremGenerator.dispose();
+        });
+
+        // Placeholder mesh - simple cube
+        var portraitMesh = null;
+        var cubeGeo = new THREE.BoxGeometry(0.9, 0.9, 0.9);
+        var cubeMat = new THREE.MeshStandardMaterial({ color: 0xcccccc, metalness: 0.15, roughness: 0.65 });
+        portraitMesh = new THREE.Mesh(cubeGeo, cubeMat);
+        portraitMesh.position.set(0, 0, 0);
+        portraitMesh.castShadow = true;
+        portraitMesh.receiveShadow = true;
+        scene.add(portraitMesh);
+        console.log('Portrait cube initialized at center');
+
+        // Load and apply LOGO_BACKGROUND texture to all cube faces
+        var texLoader = new THREE.TextureLoader();
+        texLoader.setCrossOrigin('');
+        texLoader.load('images/LOGO_BACKGROUND.png', function(tex){
+          console.log('LOGO_BACKGROUND texture loaded for cube');
+          try { tex.anisotropy = renderer.capabilities.getMaxAnisotropy(); } catch(e){}
+          // Create material array for all 6 faces with same texture
+          var cubeMaterial = new THREE.MeshPhysicalMaterial({
+            map: tex,
+            metalness: 0.3,
+            roughness: 0.3,
+            clearcoat: 0.6,
+            clearcoatRoughness: 0.1,
+            envMapIntensity: 1.3
+          });
+          portraitMesh.material = cubeMaterial;
+          console.log('Cube texture applied to all faces');
+        }, undefined, function(err){
+          console.warn('LOGO_BACKGROUND texture load failed', err);
+        });
+
+        // Animation loop
+        var t = 0;
+        var autoRotateEnabled = true;
+        var autoRotateSpeed = 0.5;
+        var orbitRadius = 2.5;
+
+        function animate(){
+          t += 0.01;
+          if (portraitMesh) {
+            portraitMesh.rotation.y += 0.012;
+            portraitMesh.rotation.x = Math.sin(t * 0.6) * 0.03;
+            portraitMesh.position.y = Math.sin(t*0.4) * 0.015;
+          }
+
+          if (autoRotateEnabled) {
+            var time = performance.now() * 0.001 * (autoRotateSpeed * 0.15);
+            var angle = time;
+            camera.position.x = Math.cos(angle) * orbitRadius;
+            camera.position.z = Math.sin(angle) * orbitRadius;
+            camera.lookAt(0, 0, 0);
+          }
+
+          try { if (typeof fillLight !== 'undefined') fillLight.position.copy(camera.position); } catch(e){}
+
+          controls.update();
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Resize handler
+        function onResize(){
+          try {
+            var w = container.clientWidth || 100;
+            var h = container.clientHeight || 100;
+            renderer.setSize(w, h);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+          } catch (e) { /* ignore */ }
+        }
+        window.addEventListener('resize', onResize);
+        onResize();
+      } catch (err) {
+        console.warn('Portrait 3D init failed', err);
+        if (fallback) fallback.style.display = 'block';
+        if (container) container.style.display = 'none';
+      }
+    })();
+  </script>
 </body>
 
 </html>

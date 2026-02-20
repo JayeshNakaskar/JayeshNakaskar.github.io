@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Auto-traced simplified logo for SVG extrusion -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Logo">
+  <title>Jayesh Nakaskar — logo</title>
+  <g fill-rule="evenodd" stroke="none" stroke-width="1">
+    <!-- Left chevron -->
+    <path d="M130 256c0-6 3-12 8-15l70-50c6-4 15-3 19 3 4 6 3 15-3 19l-61 44 61 44c6 4 7 13 3 19-4 6-13 7-19 3l-70-50c-5-3-8-9-8-15z" fill="#ffffff"/>
+    <!-- Center slash / -->
+    <path d="M256 120c8-1 16 4 18 12l40 200c2 8-4 16-12 18-8 2-16-4-18-12l-40-200c-2-8 4-16 12-18z" fill="#ffffff"/>
+    <!-- Right chevron -->
+    <path d="M382 256c0-6-3-12-8-15l-70-50c-6-4-7-13-3-19 4-6 13-7 19-3l70 50c5 3 8 9 8 15s-3 12-8 15l-70-50c-6 4-15 3-19-3-4-6-3-15 3-19l70-50c5-3 8-9 8-15z" fill="#ffffff"/>
+  </g>
+</svg>
