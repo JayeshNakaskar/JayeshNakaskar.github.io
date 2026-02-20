@@ -1921,12 +1921,14 @@
           }
 
           if (autoRotateEnabled) {
-            var time = performance.now() * 0.001 * (autoRotateSpeed * 0.15);
-            var angle = time;
-            camera.position.x = Math.cos(angle) * orbitRadius;
-            camera.position.z = Math.sin(angle) * orbitRadius;
-            camera.lookAt(0, 0, 0);
+            theta += 0.002;
           }
+
+          // Update camera position based on spherical coordinates
+          camera.position.x = radius * Math.sin(phi) * Math.cos(theta);
+          camera.position.y = radius * Math.cos(phi);
+          camera.position.z = radius * Math.sin(phi) * Math.sin(theta);
+          camera.lookAt(0, 0, 0);
 
           try { if (typeof fillLight !== 'undefined') fillLight.position.copy(camera.position); } catch(e){}
 
